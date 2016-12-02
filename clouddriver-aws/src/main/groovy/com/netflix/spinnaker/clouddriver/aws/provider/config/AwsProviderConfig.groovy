@@ -65,7 +65,8 @@ class AwsProviderConfig {
                           EddaApiFactory eddaApiFactory,
                           ApplicationContext ctx,
                           Registry registry,
-                          Scheduler reservationReportScheduler) {
+                          Scheduler reservationReportScheduler,
+                          AwsConfigurationProperties awsConfigProperties) {
     def awsProvider =
       new AwsProvider(accountCredentialsRepository, Collections.newSetFromMap(new ConcurrentHashMap<Agent, Boolean>()))
 
@@ -77,7 +78,8 @@ class AwsProviderConfig {
                            eddaApiFactory,
                            ctx,
                            registry,
-                           reservationReportScheduler)
+                           reservationReportScheduler,
+                           awsConfigProperties)
 
     awsProvider
   }

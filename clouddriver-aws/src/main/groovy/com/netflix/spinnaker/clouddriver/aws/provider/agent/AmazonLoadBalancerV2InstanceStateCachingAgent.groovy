@@ -83,7 +83,7 @@ class AmazonLoadBalancerV2InstanceStateCachingAgent implements CachingAgent, Hea
   }
 
   RateLimiter rateLimiter() {
-    return RateLimiter.create(ratelimit)
+    return RateLimiter.create(rateLimit)
   }
 
   @Override

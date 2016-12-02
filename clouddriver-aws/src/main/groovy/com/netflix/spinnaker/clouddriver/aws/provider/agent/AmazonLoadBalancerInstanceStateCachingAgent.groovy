@@ -68,6 +68,7 @@ class AmazonLoadBalancerInstanceStateCachingAgent implements CachingAgent,Health
     this.region = region
     this.objectMapper = objectMapper.enable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
     this.ctx = ctx
+    this.rateLimit = rateLimit
   }
 
   @Override
